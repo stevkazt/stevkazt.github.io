@@ -127,12 +127,15 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
   .card .links{margin-top:auto}
   .card p:not(.links){margin-bottom:12px}
 }
-/* AI level: neutral labeled pill (replaces the three-dot meter) */
-.pill{display:inline-block;align-self:flex-start;font:12px var(--mono);padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--dim);white-space:nowrap}
-.card{display:flex;flex-direction:column}
-.card .links{order:1;margin-top:auto}
-.card .pill{order:2;margin-top:auto}
-.card .links+.pill{margin-top:12px}
-.card h3{padding-right:0}
+/* AI level: small quiet pill, top right of the card */
+.pill{display:inline-flex;align-items:center;gap:6px;font:500 10.5px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--dim);background:rgba(255,255,255,.02);white-space:nowrap}
+.pill::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--acc);opacity:.85}
+.pill.l1::before{background:transparent;box-shadow:inset 0 0 0 1px var(--dim)}
+.pill.l2::before{background:linear-gradient(90deg,var(--acc) 50%,transparent 50%);box-shadow:inset 0 0 0 1px var(--acc)}
+.card{display:flex;flex-direction:column;position:relative}
+.card .links{margin-top:auto}
+.card .pill{position:absolute;top:16px;right:16px;margin:0}
+.card h3{padding-right:104px}
 .hero .pill{margin:0 0 14px}
 .hero .ai{display:none}
+@media(min-width:960px){.card.feature .pill{top:30px;right:30px}.card.feature h3{padding-right:120px}}
