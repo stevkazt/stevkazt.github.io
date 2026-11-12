@@ -120,3 +120,10 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
   main.page .hero.sub{padding:40px 0 56px}
 }
 @media(min-width:960px){main.page~footer{max-width:860px}}
+/* phone/tablet: single column, every card in a group the same height, links pinned to the bottom */
+@media(max-width:959px){
+  .cards{grid-auto-rows:1fr}
+  .card{display:flex;flex-direction:column}
+  .card .links{margin-top:auto}
+  .card p:not(.links){margin-bottom:12px}
+}
