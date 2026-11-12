@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kart Rush · stevkazt</title>
+<meta name="description" content="A mobile-first 3D kart racer that runs in the browser.">
+<meta name="theme-color" content="#0d1117">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../">stevkazt<span class="cur">_</span></a>
+  <nav>
+    <a href="../../#about" data-i18n="nav_about">about</a>
+    <a href="../../#skills" data-i18n="nav_skills">skills</a>
+    <a href="../../#projects" data-i18n="nav_projects">projects</a>
+    <a href="../../#contact" data-i18n="nav_contact">contact</a>
+  </nav>
+  <button id="lang" type="button" aria-label="Language">ES</button>
+</header>
+<main class="page">
+
+<p class="crumb"><a href="../../#projects" data-es="← proyectos">← projects</a></p>
+<section class="hero sub">
+  <p class="kicker" data-es="Juego · Three.js · PWA">Game · Three.js · PWA</p>
+  <span class="ai l3"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span><span data-i18n="ai3">AI-built, human-directed</span></span>
+  <h1>Kart Rush</h1>
+  <p class="lead" data-es="Un juego de karts en 3D, pensado para el celular, que corre directamente en el navegador y funciona sin conexión.">A 3D kart racer designed for the phone. It runs straight in the browser and works offline.</p>
+  <p class="cta">
+    <a class="btn" href="https://stevkazt.github.io/kart-rush/" data-es="Jugar ahora">Play now</a>
+    <a class="btn ghost" href="https://stevkazt.itch.io/kart-rush">itch.io</a>
+  </p>
+</section>
+<section>
+  <h2><span class="num">01</span> <span data-es="Qué es">Overview</span></h2>
+  <p data-es="Kart Rush es una carrera de karts en 3D en la línea de Mario Kart. Se juega con controles táctiles, se puede instalar en la pantalla de inicio del iPhone y, una vez instalado, funciona sin internet.">Kart Rush is a 3D kart racer in the spirit of Mario Kart. It plays with touch controls, installs to the iPhone home screen, and once installed it works without internet.</p>
+  <ul class="facts">
+    <li><b data-es="Pistas">Tracks</b><span data-es="8 pistas, cada una con su tema, alturas e inclinaciones.">8 tracks, each with its own theme, elevation and banking.</span></li>
+    <li><b data-es="Pilotos">Drivers</b><span data-es="8 personajes con su propio modelo animado.">8 characters, each with its own animated model.</span></li>
+    <li><b data-es="Carrera">Racing</b><span data-es="Rivales con IA y distintas personalidades, ítems, plataformas de impulso y derrapes.">AI rivals with different personalities, items, boost pads and drifting.</span></li>
+    <li><b data-es="Sonido">Sound</b><span data-es="Todo el audio se sintetiza con WebAudio: no usa archivos de sonido.">All audio is synthesised with WebAudio; there are no sound files.</span></li>
+  </ul>
+</section>
+<section>
+  <h2><span class="num">02</span> <span data-es="Cómo está hecho">How it's built</span></h2>
+  <div class="chips"><span>JavaScript</span><span>Three.js</span><span>cannon-es</span><span>WebAudio</span><span>Service Worker</span><span>PWA</span><span data-es="Sin build">No build step</span></div>
+  <p data-es="El juego es JavaScript puro con Three.js para el render y cannon-es para la física del vehículo. No tiene paso de compilación: son archivos estáticos servidos por GitHub Pages. Un service worker guarda todo para jugar sin conexión.">The game is plain JavaScript, with Three.js for rendering and cannon-es for vehicle physics. There is no build step: it is static files served by GitHub Pages, and a service worker caches everything for offline play.</p>
+  <p data-es="La dirección con botones digitales exigió trabajo propio: giro con rampa, límite que se reduce con la velocidad y un sistema de asistencia de estabilidad que corre en cada subpaso de la física para que el kart no gire descontrolado a alta velocidad.">Steering with digital buttons took real work: ramped input, a steering lock that shrinks with speed, and a stability assist that runs on every physics sub-step so the kart doesn't spin out at speed.</p>
+</section>
+<section>
+  <h2><span class="num">03</span> <span data-es="Cómo lo afino">How I tune it</span></h2>
+  <p data-es="Las carreras que juego en el celular envían telemetría (eventos y muestras cada segundo) a un servidor local, y analizo esos datos para ajustar la IA de los rivales y la dificultad. Me da mejores datos que las pruebas automáticas.">Races I play on my phone send telemetry (events plus one-second samples) to a local server, and I analyse that data to tune the rival AI and difficulty. It gives better data than automated tests.</p>
+</section>
+<section>
+  <h2><span class="num">04</span> <span data-es="Enlaces">Links</span></h2>
+  <p><a class="btn" href="https://stevkazt.github.io/kart-rush/" data-es="Jugar ahora">Play now</a> <a class="btn ghost" href="https://stevkazt.itch.io/kart-rush">itch.io</a></p>
+</section>
+<section>
+  <h2><span class="num">05</span> <span data-es="Uso de IA">How AI was used</span></h2>
+  <p data-es="Construido con IA, dirigido por mí. Claude Code escribió la mayor parte del código. Yo decido cómo debe ser el juego, lo pruebo en mi celular, lo ajusto con la telemetría de mis propias carreras y lo publico.">AI-built, human-directed. Claude Code wrote most of the code. I decide what the game should be, play-test it on my phone, tune it from my own race telemetry, and ship it.</p>
+</section>
+</main>
+<footer>© 2026 stevkazt</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

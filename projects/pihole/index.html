@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pi-hole · stevkazt</title>
+<meta name="description" content="A network-level ad and tracker blocker on a Raspberry Pi.">
+<meta name="theme-color" content="#0d1117">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../">stevkazt<span class="cur">_</span></a>
+  <nav>
+    <a href="../../#about" data-i18n="nav_about">about</a>
+    <a href="../../#skills" data-i18n="nav_skills">skills</a>
+    <a href="../../#projects" data-i18n="nav_projects">projects</a>
+    <a href="../../#contact" data-i18n="nav_contact">contact</a>
+  </nav>
+  <button id="lang" type="button" aria-label="Language">ES</button>
+</header>
+<main class="page">
+
+<p class="crumb"><a href="../../#projects" data-es="← proyectos">← projects</a></p>
+<section class="hero sub">
+  <p class="kicker" data-es="Infraestructura · DNS · Raspberry Pi">Infrastructure · DNS · Raspberry Pi</p>
+  <span class="ai l1"><span class="dots"><i class="on"></i><i></i><i></i></span><span data-i18n="ai1">Hand-built</span></span>
+  <h1>Pi-hole</h1>
+  <p class="lead" data-es="Un sumidero DNS Pi-hole en una Raspberry Pi que bloquea anuncios y rastreadores en cualquier dispositivo que lo elija, sin software en el cliente.">A Pi-hole DNS sinkhole on a Raspberry Pi that blocks ads and trackers for any device that opts in, with no client software.</p>
+</section>
+<section>
+  <h2><span class="num">01</span> <span data-es="Resumen">Overview</span></h2>
+  <p data-es="Pi-hole responde las consultas DNS y rechaza las que llevan a dominios conocidos de publicidad y rastreo, lo que mejora la navegación y reduce el tráfico no deseado en todos los dispositivos que lo usan.">Pi-hole answers DNS queries and refuses the ones that lead to known ad and tracking domains, which improves browsing and cuts unwanted traffic on every device that uses it.</p>
+</section>
+<section>
+  <h2><span class="num">02</span> <span data-es="Decisión de diseño">Design decision</span></h2>
+  <p data-es="Conecté la Raspberry Pi a un segmento de red en lugar de hacerla el DNS de toda la red, por tres razones:">I attached the Raspberry Pi to one network segment instead of making it the DNS for the whole network, for three reasons:</p>
+  <p data-es=""><ul class="facts"><li><b>1</b><span data-es="Evitar inspeccionar el tráfico DNS de otros usuarios de la red (privacidad).">Avoid inspecting other network users' DNS traffic (privacy).</span></li><li><b>2</b><span data-es="Que cada cliente decida si usa el Pi-hole.">Let each client opt in to using the Pi-hole.</span></li><li><b>3</b><span data-es="Los routers domésticos suelen carecer de redirección DNS avanzada.">Home routers often lack advanced DNS redirection.</span></li></ul></p>
+</section>
+<section>
+  <h2><span class="num">03</span> <span data-es="Implementación">Implementation</span></h2>
+  <p data-es="Le di a la Pi una dirección estática en <code>/etc/dhcpcd.conf</code>, instalé Pi-hole con el instalador oficial y configuré los dispositivos cliente para usarlo como resolutor DNS.">I gave the Pi a static address in <code>/etc/dhcpcd.conf</code>, installed Pi-hole with the official installer, and pointed client devices at it as their DNS resolver.</p>
+</section>
+<section>
+  <h2><span class="num">04</span> <span data-es="Resolución de problemas">Troubleshooting</span></h2>
+  <p data-es="Al principio mi portátil no bloqueaba nada. Había que actualizar las listas de bloqueo, lo que hace <code>sudo pihole -g</code>.">At first my laptop saw no blocking. The blocklists needed updating, which <code>sudo pihole -g</code> does.</p>
+</section>
+<section>
+  <h2><span class="num">05</span> <span data-es="Resultado">Result</span></h2>
+  <p data-es="Bloqueo de anuncios y rastreadores en toda la red sin extensiones de navegador, y menos consultas DNS hacia dominios de rastreo.">Network-wide ad and tracker blocking without browser extensions, and fewer DNS requests to tracking domains.</p>
+</section>
+<section>
+  <h2><span class="num">06</span> <span data-es="Tecnologías">Technologies</span></h2>
+  <div class="chips"><span>Raspberry Pi</span><span>Linux</span><span>Pi-hole</span><span>DNS / DHCP</span></div>
+</section>
+<section>
+  <h2><span class="num">07</span> <span data-es="Uso de IA">How AI was used</span></h2>
+  <p data-es="Lo diseñé y escribí yo. Ninguna IA escribió código ni configuración.">I designed and wrote this myself. No AI wrote any of the code or configuration.</p>
+</section>
+</main>
+<footer>© 2026 stevkazt</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Active Directory Lab · stevkazt</title>
+<meta name="description" content="A virtualized Windows Server lab for centralized user management and Group Policy.">
+<meta name="theme-color" content="#0d1117">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../">stevkazt<span class="cur">_</span></a>
+  <nav>
+    <a href="../../#about" data-i18n="nav_about">about</a>
+    <a href="../../#skills" data-i18n="nav_skills">skills</a>
+    <a href="../../#projects" data-i18n="nav_projects">projects</a>
+    <a href="../../#contact" data-i18n="nav_contact">contact</a>
+  </nav>
+  <button id="lang" type="button" aria-label="Language">ES</button>
+</header>
+<main class="page">
+
+<p class="crumb"><a href="../../#projects" data-es="← proyectos">← projects</a></p>
+<section class="hero sub">
+  <p class="kicker" data-es="Infraestructura · Windows Server">Infrastructure · Windows Server</p>
+  <span class="ai l1"><span class="dots"><i class="on"></i><i></i><i></i></span><span data-i18n="ai1">Hand-built</span></span>
+  <h1>Active Directory Lab</h1>
+  <p class="lead" data-es="Un entorno virtualizado de Windows Server que simula TI corporativa: controlador de dominio, estación unida al dominio, usuarios estructurados y políticas de seguridad.">A virtualized Windows Server environment that simulates corporate IT: a domain controller, a joined workstation, structured users and security policies.</p>
+</section>
+<section>
+  <h2><span class="num">01</span> <span data-es="Resumen">Overview</span></h2>
+  <p data-es="Armé el laboratorio para practicar lo esencial del soporte de TI empresarial: administración centralizada de usuarios, políticas de seguridad y recursos de red.">I built the lab to practise the core of enterprise IT support: centralized user management, security policies and network resource administration.</p>
+</section>
+<section>
+  <h2><span class="num">02</span> <span data-es="Arquitectura">Architecture</span></h2>
+  <p data-es=""><ul class="facts"><li><b data-es="Servidor">Server</b><span data-es="Windows Server 2022 como controlador de dominio, con los roles DNS, DHCP y AD DS.">Windows Server 2022 as the domain controller, running the DNS, DHCP and AD DS roles.</span></li><li><b data-es="Cliente">Client</b><span data-es="Una estación de trabajo unida al dominio.">A workstation joined to the domain.</span></li><li><b data-es="Red">Network</b><span data-es="Red NAT aislada que simula una LAN corporativa.">An isolated NAT network simulating a corporate LAN.</span></li></ul></p>
+</section>
+<section>
+  <h2><span class="num">03</span> <span data-es="Implementación">Implementation</span></h2>
+  <p data-es="Con el controlador de dominio listo, organicé el directorio para que escale: Unidades Organizativas por departamento (TI, Finanzas, Ventas); un script de PowerShell para importar usuarios en bloque con nombres estandarizados; y políticas de grupo para complejidad de contraseñas y acceso restringido al Panel de control para usuarios sin permisos de administrador.">Once the domain controller was up, I organised the directory for growth: Organizational Units for the departments (IT, Finance, Sales); a PowerShell script to bulk-import users with standardized naming; and Group Policy for password complexity and restricted Control Panel access for non-admin users.</p>
+</section>
+<section>
+  <h2><span class="num">04</span> <span data-es="Resolución de problemas">Troubleshooting</span></h2>
+  <p data-es="El cliente no se unía al dominio porque usaba el DNS del router en lugar del del controlador. Apuntar su DNS IPv4 a la IP estática del controlador lo resolvió y dejó claro cuánto depende Active Directory de DNS.">The client wouldn't join the domain because it was using the router's DNS instead of the domain controller's. Pointing its IPv4 DNS at the controller's static IP fixed it, and made the dependency between DNS and Active Directory concrete.</p>
+</section>
+<section>
+  <h2><span class="num">05</span> <span data-es="Resultado">Result</span></h2>
+  <p data-es="Un dominio de Windows funcional, con usuarios, grupos y políticas administrados.">A working Windows domain with managed users, groups and policies.</p>
+</section>
+<section>
+  <h2><span class="num">06</span> <span data-es="Tecnologías">Technologies</span></h2>
+  <div class="chips"><span>Windows Server 2022</span><span>Active Directory (AD DS)</span><span>Group Policy</span><span>PowerShell</span><span>VirtualBox / VMware</span></div>
+</section>
+<section>
+  <h2><span class="num">07</span> <span data-es="Uso de IA">How AI was used</span></h2>
+  <p data-es="Lo diseñé y escribí yo. Ninguna IA escribió código ni configuración.">I designed and wrote this myself. No AI wrote any of the code or configuration.</p>
+</section>
+</main>
+<footer>© 2026 stevkazt</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

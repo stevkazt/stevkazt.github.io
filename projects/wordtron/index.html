@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wordtron · stevkazt</title>
+<meta name="description" content="A Spanish-language Wordle-style word game built with Next.js, React and TypeScript.">
+<meta name="theme-color" content="#0d1117">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../">stevkazt<span class="cur">_</span></a>
+  <nav>
+    <a href="../../#about" data-i18n="nav_about">about</a>
+    <a href="../../#skills" data-i18n="nav_skills">skills</a>
+    <a href="../../#projects" data-i18n="nav_projects">projects</a>
+    <a href="../../#contact" data-i18n="nav_contact">contact</a>
+  </nav>
+  <button id="lang" type="button" aria-label="Language">ES</button>
+</header>
+<main class="page">
+
+<p class="crumb"><a href="../../#projects" data-es="← proyectos">← projects</a></p>
+<section class="hero sub">
+  <p class="kicker" data-es="Juego · Next.js · Docker">Game · Next.js · Docker</p>
+  <span class="ai l1"><span class="dots"><i class="on"></i><i></i><i></i></span><span data-i18n="ai1">Hand-built</span></span>
+  <h1>Wordtron</h1>
+  <p class="lead" data-es="Un juego de palabras en español al estilo Wordle: seis intentos para adivinar una palabra de cinco letras.">A Spanish-language, Wordle-style word game: six tries to guess a five-letter word.</p>
+</section>
+<section>
+  <h2><span class="num">01</span> <span data-es="Qué es">Overview</span></h2>
+  <p data-es="Wordtron es un juego de adivinar palabras en español. Cada partida elige una palabra secreta de cinco letras y tienes seis intentos; después de cada uno, las letras se colorean en verde (lugar correcto) o naranja (lugar incorrecto). Se juega con el teclado físico o el de pantalla, así que funciona en el celular, y se puede instalar como app.">Wordtron is a word-guessing game in Spanish. Each round picks a secret five-letter word and you get six guesses, with the letters coloured green (right place) or orange (wrong place) after each one. It plays with a physical keyboard or the on-screen one, so it works on phones, and it can be installed as an app.</p>
+</section>
+<section>
+  <h2><span class="num">02</span> <span data-es="Cómo funciona">How it works</span></h2>
+  <ul class="facts">
+    <li><b data-es="Palabras">Words</b><span data-es="Un diccionario propio: 1.259 palabras posibles como secreta y 6.153 válidas como intento.">A bundled dictionary: 1,259 words that can be the answer and 6,153 that are valid guesses.</span></li>
+    <li><b data-es="Lógica">Logic</b><span data-es="Evaluación en dos pasadas: primero los aciertos exactos, que consumen la letra, y después las letras en lugar incorrecto, para que las repetidas se coloreen bien.">A two-pass check: exact matches first, which consume the letter, then misplaced letters, so repeated letters are coloured correctly.</span></li>
+    <li><b data-es="Sin backend">No backend</b><span data-es="Todo corre en el navegador; el diccionario se carga como archivo estático.">Everything runs in the browser; the dictionary loads as a static file.</span></li>
+  </ul>
+</section>
+<section>
+  <h2><span class="num">03</span> <span data-es="Despliegue">Deployment</span></h2>
+  <p data-es="La app está en un contenedor con una compilación Docker de varias etapas sobre una imagen ligera de Node Alpine, y un archivo Compose para ejecutarla. Se servía detrás del proxy inverso Nginx de mi VPS, con su propio subdominio y HTTPS.">The app is containerised with a multi-stage Docker build on a small Node Alpine image, with a Compose file for running it. It was served behind the Nginx reverse proxy on my VPS, with its own subdomain and HTTPS.</p>
+  <p><a href="../reverse-proxy/" data-es="Ver el proyecto del proxy inverso →">See the reverse proxy project →</a></p>
+</section>
+<section>
+  <h2><span class="num">04</span> <span data-es="Tecnologías">Technologies</span></h2>
+  <div class="chips"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>PWA</span><span>Docker</span></div>
+</section>
+<section>
+  <h2><span class="num">05</span> <span data-es="Uso de IA">How AI was used</span></h2>
+  <p data-es="Lo diseñé y escribí yo. Ninguna IA escribió código ni configuración.">I designed and wrote this myself. No AI wrote any of the code or configuration.</p>
+</section>
+</main>
+<footer>© 2026 stevkazt</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SGVA thesis · stevkazt</title>
+<meta name="description" content="Thesis and research paper on architectural quality and technical debt in AI-assisted development.">
+<meta name="theme-color" content="#0d1117">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../">stevkazt<span class="cur">_</span></a>
+  <nav>
+    <a href="../../#about" data-i18n="nav_about">about</a>
+    <a href="../../#skills" data-i18n="nav_skills">skills</a>
+    <a href="../../#projects" data-i18n="nav_projects">projects</a>
+    <a href="../../#contact" data-i18n="nav_contact">contact</a>
+  </nav>
+  <button id="lang" type="button" aria-label="Language">ES</button>
+</header>
+<main class="page">
+
+<p class="crumb"><a href="../../#projects" data-es="← proyectos">← projects</a></p>
+<section class="hero sub">
+  <p class="kicker" data-es="Tesis · Investigación">Thesis · Research</p>
+  <span class="ai l3"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span><span data-i18n="ai3">AI-built, human-directed</span></span>
+  <h1>SGVA</h1>
+  <p class="lead" data-es="Mi tesis de Ingeniería de Telecomunicaciones: cómo cambia la calidad arquitectónica de un sistema cuando una IA generativa escribe la mayor parte del código.">My Telecommunications Engineering thesis: how the architectural quality of a system changes when a generative AI writes most of the code.</p>
+</section>
+<section>
+  <h2><span class="num">01</span> <span data-es="La pregunta">The question</span></h2>
+  <p><i data-es="¿De qué manera el uso continuo de inteligencia artificial generativa, priorizando la corrección funcional, altera el cumplimiento de las reglas de dependencias y la deuda técnica en un desarrollo iterativo bajo Arquitectura Limpia?">How does continuous use of generative AI, prioritising functional correctness, change dependency-rule compliance and technical debt in iterative development under Clean Architecture?</i></p>
+  <ul class="facts">
+    <li><b data-es="Título">Title</b><span data-es="Análisis de la calidad arquitectónica y la deuda técnica en un sistema desarrollado bajo Arquitectura Limpia con asistencia de inteligencia artificial generativa">Analysis of architectural quality and technical debt in a system developed under Clean Architecture with generative AI assistance</span></li>
+    <li><b data-es="Autor">Author</b><span>Johann Stev Castellanos Gonzalez</span></li>
+    <li><b data-es="Universidad">University</b><span data-es="Universidad Santo Tomás (USTA), Bogotá · 2026">Universidad Santo Tomás (USTA), Bogotá · 2026</span></li>
+    <li><b data-es="Estado">Status</b><span data-es="Tesis en cierre, diciembre de 2026">Thesis wrapping up, December 2026</span></li>
+  </ul>
+</section>
+<section>
+  <h2><span class="num">02</span> <span data-es="Método">Method</span></h2>
+  <p data-es="Construí un sistema real (SGVA, en Kotlin y Spring Boot) bajo Arquitectura Limpia, con Claude Code como asistente principal: una línea base manual y seis iteraciones, de 10 a 3.875 líneas de código. Al cierre de cada prompt medí el sistema con dos instrumentos:">I built a real system (SGVA, in Kotlin and Spring Boot) under Clean Architecture, with Claude Code as the main assistant: a manual baseline plus six iterations, growing from 10 to 3,875 lines of code. At the end of each prompt I measured the system with two instruments:</p>
+  <div class="chips"><span>SonarQube</span><span>ArchUnit</span><span>Kotlin</span><span>Spring Boot</span><span>Claude Code</span></div>
+  <ul class="facts">
+    <li><b>SonarQube</b><span data-es="Un mismo servidor y perfil de calidad: 21 mediciones. Indicador clave: ratio de deuda técnica.">One server and quality profile: 21 measurements. Key indicator: technical debt ratio.</span></li>
+    <li><b>ArchUnit</b><span data-es="Reglas de dependencias escritas a mano antes de la fase con IA; una violación en dominio o casos de uso es una ruptura crítica.">Dependency rules written by hand before the AI phase; a violation in domain or use cases is a critical break.</span></li>
+    <li><b data-es="Estrés">Stress</b><span data-es="Dos cambios de tecnología deliberados: persistencia relacional (V3) y reportes en PDF (V4).">Two deliberate technology changes: relational persistence (V3) and PDF reports (V4).</span></li>
+  </ul>
+</section>
+<section>
+  <h2><span class="num">03</span> <span data-es="Resultados y conclusiones">Results and conclusions</span></h2>
+  <ul class="facts">
+    <li><b data-es="Deuda técnica">Tech debt</b><span data-es="El ratio bajó de 3,3 % en la línea base manual a 0,4 % en el primer prompt y se mantuvo entre 0,0 % y 0,1 %, con calificación A en las 21 mediciones.">The ratio fell from 3.3 % in the manual baseline to 0.4 % at the first prompt and stayed between 0.0 % and 0.1 %, with grade A in all 21 measurements.</span></li>
+    <li><b data-es="Reglas">Rules</b><span data-es="Las reglas de dependencias de ArchUnit estuvieron en verde en toda la serie. La suite falló cuatro veces en V1, por una convención de nombres, y el agente adaptó el código sin tocar las reglas.">ArchUnit's dependency rules were green throughout the series. The suite failed four times in V1, on a naming convention, and the agent adapted the code without touching the rules.</span></li>
+    <li><b data-es="Estrés">Stress</b><span data-es="La base de datos relacional y la librería de PDF quedaron confinadas a infraestructura, sin cambiar el ratio de deuda ni provocar fallos de ArchUnit.">The relational database and the PDF library stayed confined to infrastructure, with no change in the debt ratio and no ArchUnit failure.</span></li>
+  </ul>
+  <p data-es="Con estas mediciones no se observa un aumento progresivo de la deuda ni de las violaciones de dependencias. Eso no refuta la hipótesis: el agente veía la suite de ArchUnit durante la sesión, y los instrumentos no miden todo, por ejemplo el acoplamiento entre componentes de infraestructura. Las conclusiones describen lo ocurrido con esa instrumentación visible; ponerlas a prueba exige repetir el experimento sin esa retroalimentación.">With these measurements there is no progressive increase in debt or in dependency violations. That does not refute the hypothesis: the agent could see the ArchUnit suite during the session, and the instruments don't measure everything, for example coupling between infrastructure components. The conclusions describe what happened with that instrumentation visible; testing them needs a replication without that feedback.</p>
+  <p data-es="Capítulos aún en borrador; los resultados pueden cambiar antes de la entrega final.">Chapters are still drafts; results may change before the final submission.</p>
+</section>
+<section>
+  <h2><span class="num">04</span> <span data-es="Documentos">Documents</span></h2>
+  <p data-es="Aquí irán el enlace a la tesis y al paper cuando estén listos para publicarse.">Links to the thesis and the paper will go here once they're ready to be public.</p>
+</section>
+<section>
+  <h2><span class="num">05</span> <span data-es="Uso de IA">How AI was used</span></h2>
+  <p data-es="Construido con IA y dirigido por mí, por diseño: construir SGVA con Claude Code es el experimento. Escribí a mano las reglas de arquitectura antes de la fase con IA, fijé el protocolo de prompts y medí cada iteración.">AI-built, human-directed, by design: building SGVA with Claude Code is the experiment. I wrote the architecture rules by hand before the AI phase, fixed the prompting protocol, and measured every iteration.</p>
+</section>
+</main>
+<footer>© 2026 stevkazt</footer>
+<script src="../../app.js"></script>
+</body>
+</html>

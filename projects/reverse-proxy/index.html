@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nginx Reverse Proxy · stevkazt</title>
+<meta name="description" content="A reverse proxy on a Linux VPS that serves several sites over HTTPS from one IP.">
+<meta name="theme-color" content="#0d1117">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../">stevkazt<span class="cur">_</span></a>
+  <nav>
+    <a href="../../#about" data-i18n="nav_about">about</a>
+    <a href="../../#skills" data-i18n="nav_skills">skills</a>
+    <a href="../../#projects" data-i18n="nav_projects">projects</a>
+    <a href="../../#contact" data-i18n="nav_contact">contact</a>
+  </nav>
+  <button id="lang" type="button" aria-label="Language">ES</button>
+</header>
+<main class="page">
+
+<p class="crumb"><a href="../../#projects" data-es="← proyectos">← projects</a></p>
+<section class="hero sub">
+  <p class="kicker" data-es="Infraestructura · Linux · Nginx">Infrastructure · Linux · Nginx</p>
+  <span class="ai l1"><span class="dots"><i class="on"></i><i></i><i></i></span><span data-i18n="ai1">Hand-built</span></span>
+  <h1>Nginx Reverse Proxy</h1>
+  <p class="lead" data-es="Un proxy inverso central en un VPS con Linux: varios sitios en contenedores detrás de una sola IP pública, enrutados por subdominio y con SSL/TLS automático.">A central reverse proxy on a Linux VPS: several containerized sites behind one public IP, routed by subdomain, with automatic SSL/TLS.</p>
+</section>
+<section>
+  <h2><span class="num">01</span> <span data-es="Resumen">Overview</span></h2>
+  <p data-es="Una sola IP pública aloja varios servicios web, entre ellos un juego y sitios de portafolio. El TLS se gestiona en un solo lugar y las direcciones y puertos internos de los servicios quedan ocultos.">One public IP hosts several web services, including a game and personal portfolio sites. TLS is handled in one place, and the internal addresses and ports of the backends stay hidden.</p>
+</section>
+<section>
+  <h2><span class="num">02</span> <span data-es="Arquitectura">Architecture</span></h2>
+  <p data-es="Nginx actúa como controlador de tráfico: cada solicitud va al contenedor correcto según su subdominio. Cada servicio corre en su propio contenedor de Docker.">Nginx acts as the traffic controller: each request is sent to the right container based on its subdomain. Each service runs in its own Docker container.</p>
+</section>
+<section>
+  <h2><span class="num">03</span> <span data-es="Implementación">Implementation</span></h2>
+  <p data-es="Un bloque de servidor por subdominio con <code>proxy_pass</code> al contenedor, y certificados de Let's Encrypt para HTTPS automático en cada subdominio.">One server block per subdomain with <code>proxy_pass</code> to the container, and Let's Encrypt certificates for automatic HTTPS on every subdomain.</p>
+</section>
+<section>
+  <h2><span class="num">04</span> <span data-es="Resolución de problemas">Troubleshooting</span></h2>
+  <p data-es="Los subdominios no cargaban desde mi equipo aunque todo parecía funcionar. Revisé el estado de los contenedores y los puertos, validé la configuración con <code>nginx -t</code> y la resolución de nombres. La causa era la exigencia de HTTPS del navegador: Chrome y Brave rechazan HTTP plano para ciertos dominios o configuraciones HSTS en caché. Ejecutar Certbot para cada subdominio antes de cargarlo, para que Nginx escuchara en el 443 con certificados válidos, lo resolvió.">The subdomains weren't reachable from my machine even though everything looked healthy. I checked the container status and port mappings, validated the config with <code>nginx -t</code> and looked at name resolution. The cause was browser-level HTTPS enforcement: Chrome and Brave refuse plain HTTP for some domains or cached HSTS settings. Running Certbot for each subdomain before loading it, so Nginx listened on 443 with valid certificates, fixed it.</p>
+</section>
+<section>
+  <h2><span class="num">05</span> <span data-es="Resultado">Result</span></h2>
+  <p data-es="Varias aplicaciones en una sola IP, TLS completo en todos los servicios públicos y sin exponer IPs ni puertos internos.">Several applications on a single IP, full TLS on every public service, and internal IPs and ports not exposed.</p>
+</section>
+<section>
+  <h2><span class="num">06</span> <span data-es="Tecnologías">Technologies</span></h2>
+  <div class="chips"><span>Nginx</span><span>Nginx Proxy Manager</span><span>Let's Encrypt</span><span>Docker</span><span>Linux (Ubuntu)</span><span>VPS</span></div>
+</section>
+<section>
+  <h2><span class="num">07</span> <span data-es="Uso de IA">How AI was used</span></h2>
+  <p data-es="Lo diseñé y escribí yo. Ninguna IA escribió código ni configuración.">I designed and wrote this myself. No AI wrote any of the code or configuration.</p>
+</section>
+</main>
+<footer>© 2026 stevkazt</footer>
+<script src="../../app.js"></script>
+</body>
+</html>
