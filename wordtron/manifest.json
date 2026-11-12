@@ -1,0 +1,16 @@
+{
+  "name": "Wordtron: Daily Word Challenge",
+  "short_name": "Wordtron",
+  "description": "A futuristic word guessing game.",
+  "start_url": "/wordtron/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "/wordtron/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
