@@ -112,3 +112,11 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
 }
 
 @media(min-width:960px){.card.half{grid-column:span 3}}
+@media(min-width:960px){.card:not(.feature){min-height:128px}}
+/* project sub-pages: single readable column (the 2-column grid above is for the home page only) */
+@media(min-width:960px){
+  main.page{display:block;max-width:860px}
+  main.page section{padding:56px 0}
+  main.page .hero.sub{padding:40px 0 56px}
+}
+@media(min-width:960px){main.page~footer{max-width:860px}}

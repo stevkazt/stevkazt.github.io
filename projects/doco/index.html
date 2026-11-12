@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doco · stevkazt</title>
+<meta name="description" content="A personal finance app for Bancolombia, Nequi and Nu statements.">
+<meta name="theme-color" content="#0d1117">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../">stevkazt<span class="cur">_</span></a>
+  <nav>
+    <a href="../../#about" data-i18n="nav_about">about</a>
+    <a href="../../#skills" data-i18n="nav_skills">skills</a>
+    <a href="../../#projects" data-i18n="nav_projects">projects</a>
+    <a href="../../#contact" data-i18n="nav_contact">contact</a>
+  </nav>
+  <button id="lang" type="button" aria-label="Language">ES</button>
+</header>
+<main class="page">
+
+<p class="crumb"><a href="../../#projects" data-es="← proyectos">← projects</a></p>
+<section class="hero sub">
+  <p class="kicker" data-es="Web app · React · Neon">Web app · React · Neon</p>
+  <span class="ai l3"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span><span data-i18n="ai3">AI-built, human-directed</span></span>
+  <h1>Doco</h1>
+  <p class="lead" data-es="Una app de finanzas personales: importa tus extractos de Bancolombia, Nequi y Nu, categoriza los movimientos y muestra a dónde se va el dinero.">A personal finance app: import your Bancolombia, Nequi and Nu statements, categorize the transactions and see where the money goes.</p>
+  <p class="cta"><a class="btn" href="https://doco-drab.vercel.app" data-es="Abrir la app">Open the app</a></p>
+</section>
+<section>
+  <h2><span class="num">01</span> <span data-es="Qué hace">What it does</span></h2>
+  <ul class="facts">
+    <li><b data-es="Importar">Import</b><span data-es="Sube los extractos en PDF o Excel; la app lee los movimientos y los concilia con los que ya tenías.">Upload PDF or Excel statements; the app reads the transactions and reconciles them with the ones you already have.</span></li>
+    <li><b data-es="Categorizar">Categorize</b><span data-es="Reglas automáticas, categorías propias, división de una transacción y enlace de traslados entre cuentas para que no cuenten como gasto.">Automatic rules, your own categories, splitting one transaction, and linking transfers between accounts so they don't count as spending.</span></li>
+    <li><b data-es="Analizar">Analyze</b><span data-es="Resumen con ingresos, gastos y neto; distribución por categoría; tendencias por mes; y una tabla de transacciones con filtros.">An overview with income, spending and net; a breakdown by category; monthly trends; and a filterable transaction table.</span></li>
+  </ul>
+  <p data-es="Cualquiera puede crear una cuenta y usarla con sus propios extractos." >Anyone can create an account and use it with their own statements.</p>
+</section>
+<section>
+  <h2><span class="num">02</span> <span data-es="Cómo está hecha">How it is built</span></h2>
+  <p data-es="Empezó como una app local con un backend en Python (FastAPI) y una base SQLite. Después moví todo el motor a JavaScript que corre en el navegador: los lectores de extractos, las reglas y las consultas. Comparé el resultado del motor nuevo contra el backend en Python con extractos reales y los resultados coincidieron. Hoy es un sitio estático en Vercel con inicio de sesión (Neon Auth) y los datos guardados en una base Neon.">It started as a local app with a Python (FastAPI) backend and a SQLite database. I then moved the whole engine to JavaScript that runs in the browser: the statement parsers, the rules and the queries. I checked the new engine against the Python backend on real statements and the results matched. Today it is a static site on Vercel with login (Neon Auth) and the data stored in a Neon database.</p>
+  <div class="chips"><span>React</span><span>Vite</span><span>Recharts</span><span>JavaScript</span><span>Neon</span><span>Vercel</span></div>
+</section>
+<section>
+  <h2><span class="num">03</span> <span data-es="Uso de IA">How AI was used</span></h2>
+  <p data-es="Construido con IA, dirigido por mí. Claude Code escribió la mayor parte del código. Yo defino qué debe hacer la app, la uso con mis propios extractos, reviso los resultados y decido qué sigue.">AI-built, human-directed. Claude Code wrote most of the code. I decide what the app should do, use it with my own statements, check the results and decide what comes next.</p>
+</section>
+</main>
+<footer>© 2026 stevkazt</footer>
+<script src="../../app.js"></script>
+</body>
+</html>
