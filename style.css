@@ -127,3 +127,12 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
   .card .links{margin-top:auto}
   .card p:not(.links){margin-bottom:12px}
 }
+/* AI level: neutral labeled pill (replaces the three-dot meter) */
+.pill{display:inline-block;align-self:flex-start;font:12px var(--mono);padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--dim);white-space:nowrap}
+.card{display:flex;flex-direction:column}
+.card .links{order:1;margin-top:auto}
+.card .pill{order:2;margin-top:auto}
+.card .links+.pill{margin-top:12px}
+.card h3{padding-right:0}
+.hero .pill{margin:0 0 14px}
+.hero .ai{display:none}
