@@ -170,3 +170,12 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
   .strip .shots.phones .shot{flex-basis:60%}
 }
 @media(max-width:600px){.strip{align-items:flex-start}}
+/* wide Kart Rush card: pill goes under the title so it does not crowd the image */
+@media(min-width:960px){
+  .cards>.card.feature:first-child{grid-template-rows:auto auto auto 1fr}
+  .cards>.card.feature:first-child h3{grid-row:1;padding-right:0}
+  .cards>.card.feature:first-child .pill{position:static;grid-column:1;grid-row:2;justify-self:start;margin:2px 0 16px}
+  .cards>.card.feature:first-child p:not(.links){grid-row:3}
+  .cards>.card.feature:first-child .links{grid-row:4;align-self:end}
+  .cards>.card.feature:first-child .card-img{grid-row:1 / span 4;margin-top:0}
+}
