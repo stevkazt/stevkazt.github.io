@@ -158,3 +158,4 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
 }
 .hero .pill{justify-self:start;width:fit-content}
 @media(min-width:960px){.cards>.card.feature:first-child{grid-template-rows:auto auto 1fr}}
+.gallery .note{margin:0;font:12px var(--mono);color:var(--dim)}
