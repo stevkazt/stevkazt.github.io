@@ -159,3 +159,14 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
 .hero .pill{justify-self:start;width:fit-content}
 @media(min-width:960px){.cards>.card.feature:first-child{grid-template-rows:auto auto 1fr}}
 .gallery .note{margin:0;font:12px var(--mono);color:var(--dim)}
+
+/* gallery: grid on desktop, swipeable strip on phones */
+.strip{display:grid;gap:14px}
+@media(max-width:600px){
+  .strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}
+  .strip::-webkit-scrollbar{display:none}
+  .strip .shots{display:contents}
+  .strip .shot{flex:0 0 86%;scroll-snap-align:start}
+  .strip .shots.phones .shot{flex-basis:60%}
+}
+@media(max-width:600px){.strip{align-items:flex-start}}
