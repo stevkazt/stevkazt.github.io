@@ -179,3 +179,16 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
   .cards>.card.feature:first-child .links{grid-row:4;align-self:end}
   .cards>.card.feature:first-child .card-img{grid-row:1 / span 4;margin-top:0}
 }
+
+/* diagrams */
+.diagram{margin:0}
+.diagram svg{display:block;width:100%;max-width:520px;height:auto}
+.diagram .n{fill:var(--panel);stroke:var(--line);stroke-width:1.5}
+.diagram .n.acc{stroke:var(--acc)}
+.diagram .grp{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:6 5}
+.diagram .t{fill:var(--fg);font:600 17px var(--sans);text-anchor:middle}
+.diagram .s{fill:var(--dim);font:13px var(--mono);text-anchor:middle}
+.diagram .l{fill:var(--dim);font:12px var(--mono)}
+.diagram .a{fill:none;stroke:var(--dim);stroke-width:1.6}
+.diagram marker path{fill:var(--dim)}
+.diagram figcaption{font:12px var(--mono);color:var(--dim);margin-top:10px}

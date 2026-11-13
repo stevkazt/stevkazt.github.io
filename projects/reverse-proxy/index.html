@@ -6,7 +6,7 @@
 <title>Nginx Reverse Proxy · stevkazt</title>
 <meta name="description" content="A reverse proxy on a Linux VPS that serves several sites over HTTPS from one IP.">
 <meta name="theme-color" content="#0d1117">
-<link rel="stylesheet" href="../../style.css?v=1794530740">
+<link rel="stylesheet" href="../../style.css?v=1794531181">
 </head>
 <body>
 <header class="top">
@@ -27,6 +27,12 @@
   <span class="pill l1" data-i18n="ai1">Hand-built</span>
   <h1>Nginx Reverse Proxy</h1>
   <p class="lead" data-es="Un proxy inverso central en un VPS con Linux: varios sitios en contenedores detrás de una sola IP pública, enrutados por subdominio y con SSL/TLS automático.">A central reverse proxy on a Linux VPS: several containerized sites behind one public IP, routed by subdomain, with automatic SSL/TLS.</p>
+</section>
+<section class="gallery diagram-section">
+  <figure class="diagram">
+    <svg viewBox="0 0 480 480" role="img" aria-labelledby="dg-t dg-d" xmlns="http://www.w3.org/2000/svg"><title id="dg-t">Reverse proxy setup</title><desc id="dg-d">The internet reaches one public IP. Nginx terminates TLS and routes each subdomain to its own Docker container.</desc><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z"/></marker></defs><rect class="n" x="140" y="10" width="200" height="44" rx="10"/><text class="t" x="240.0" y="38.0">Internet</text><path class="a" d="M240 54 V86" marker-end="url(#arr)"/><rect class="n" x="100" y="88" width="280" height="54" rx="10"/><text class="t" x="240.0" y="111.0">One public IP</text><text class="s" x="240.0" y="133.0">ports 80 and 443</text><path class="a" d="M240 142 V172" marker-end="url(#arr)"/><rect class="n acc" x="60" y="174" width="360" height="70" rx="10"/><text class="t" x="240.0" y="205.0">Nginx reverse proxy</text><text class="s" x="240.0" y="227.0">routes by subdomain · TLS</text><rect class="grp" x="20" y="292" width="440" height="176" rx="14"/><text class="l" x="240" y="456" text-anchor="middle">Docker network · backends not exposed</text><path class="a" d="M240 244 V262 H90 V334" marker-end="url(#arr)"/><path class="a" d="M240 244 V334" marker-end="url(#arr)"/><path class="a" d="M240 244 V262 H390 V334" marker-end="url(#arr)"/><rect class="n" x="30" y="336" width="120" height="90" rx="10"/><text class="t" x="90.0" y="377.0">game</text><text class="s" x="90.0" y="399.0">container</text><rect class="n" x="180" y="336" width="120" height="90" rx="10"/><text class="t" x="240.0" y="377.0">portfolio</text><text class="s" x="240.0" y="399.0">container</text><rect class="n" x="330" y="336" width="120" height="90" rx="10"/><text class="t" x="390.0" y="377.0">other site</text><text class="s" x="390.0" y="399.0">container</text></svg>
+    <figcaption data-es="Diagrama de la configuración (ilustrativo, no es una captura).">Diagram of the setup (illustrative, not a screenshot).</figcaption>
+  </figure>
 </section>
 <section>
   <h2><span class="num">01</span> <span data-es="Resumen">Overview</span></h2>
@@ -58,6 +64,6 @@
 </section>
 </main>
 <footer>© 2026 stevkazt</footer>
-<script src="../../app.js?v=1794530740"></script>
+<script src="../../app.js?v=1794531181"></script>
 </body>
 </html>

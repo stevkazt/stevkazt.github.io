@@ -6,7 +6,7 @@
 <title>Pi-hole · stevkazt</title>
 <meta name="description" content="A network-level ad and tracker blocker on a Raspberry Pi.">
 <meta name="theme-color" content="#0d1117">
-<link rel="stylesheet" href="../../style.css?v=1794530740">
+<link rel="stylesheet" href="../../style.css?v=1794531181">
 </head>
 <body>
 <header class="top">
@@ -27,6 +27,12 @@
   <span class="pill l1" data-i18n="ai1">Hand-built</span>
   <h1>Pi-hole</h1>
   <p class="lead" data-es="Un sumidero DNS Pi-hole en una Raspberry Pi que bloquea anuncios y rastreadores en cualquier dispositivo que lo elija, sin software en el cliente.">A Pi-hole DNS sinkhole on a Raspberry Pi that blocks ads and trackers for any device that opts in, with no client software.</p>
+</section>
+<section class="gallery diagram-section">
+  <figure class="diagram">
+    <svg viewBox="0 0 480 536" role="img" aria-labelledby="dg-t dg-d" xmlns="http://www.w3.org/2000/svg"><title id="dg-t">Pi-hole DNS filtering</title><desc id="dg-d">A device that opted in sends DNS queries to the Pi-hole. Blocklisted ad and tracker domains are refused; other queries go to the upstream DNS. Other devices keep the router DNS.</desc><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z"/></marker></defs><rect class="n" x="130" y="10" width="220" height="60" rx="10"/><text class="t" x="240.0" y="36.0">Your device</text><text class="s" x="240.0" y="58.0">uses the Pi-hole as DNS</text><path class="a" d="M240 70 V102" marker-end="url(#arr)"/><text class="l" x="252" y="92">DNS query</text><rect class="n acc" x="80" y="104" width="320" height="70" rx="10"/><text class="t" x="240.0" y="135.0">Pi-hole</text><text class="s" x="240.0" y="157.0">Raspberry Pi · static IP</text><path class="a" d="M240 174 V206" marker-end="url(#arr)"/><path class="n" d="M240 208 L352 254 L240 300 L128 254 Z"/><text class="t" x="240" y="260">On a blocklist?</text><path class="a" d="M128 254 H79 V346" marker-end="url(#arr)"/><text class="l" x="84" y="246">yes</text><path class="a" d="M352 254 H401 V346" marker-end="url(#arr)"/><text class="l" x="372" y="246">no</text><rect class="n" x="4" y="348" width="150" height="64" rx="10"/><text class="t" x="79.0" y="376.0">Refused</text><text class="s" x="79.0" y="398.0">ads and trackers</text><rect class="n" x="326" y="348" width="150" height="64" rx="10"/><text class="t" x="401.0" y="376.0">Upstream DNS</text><text class="s" x="401.0" y="398.0">normal answer</text><rect class="grp" x="40" y="450" width="400" height="66" rx="12"/><text class="t" x="240" y="478" style="font-weight:500">Other devices keep the router’s DNS</text><text class="s" x="240" y="500">the Pi-hole is opt-in, one network segment</text></svg>
+    <figcaption data-es="Diagrama de cómo funciona (ilustrativo, no es una captura).">Diagram of how it works (illustrative, not a screenshot).</figcaption>
+  </figure>
 </section>
 <section>
   <h2><span class="num">01</span> <span data-es="Resumen">Overview</span></h2>
@@ -59,6 +65,6 @@
 </section>
 </main>
 <footer>© 2026 stevkazt</footer>
-<script src="../../app.js?v=1794530740"></script>
+<script src="../../app.js?v=1794531181"></script>
 </body>
 </html>
