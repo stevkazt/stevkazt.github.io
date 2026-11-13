@@ -139,3 +139,4 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
 .hero .pill{margin:0 0 14px}
 .hero .ai{display:none}
 @media(min-width:960px){.card.feature .pill{top:30px;right:30px}.card.feature h3{padding-right:120px}}
+@media(min-width:960px){.cards>.card.feature:first-child{grid-column:span 6}}
