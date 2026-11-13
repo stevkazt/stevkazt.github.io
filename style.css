@@ -198,3 +198,6 @@ code{font:.9em var(--mono);background:var(--panel);padding:1px 5px;border-radius
 .cards+.cards{margin-top:14px}
 .cards+.grp{margin-top:32px}
 @media(min-width:960px){.cards+.cards{margin-top:18px}.cards.trio{grid-template-columns:repeat(3,1fr)}.cards.trio>.card{grid-column:span 1}.cards.trio>.card.feature p{font-size:15px}}
+
+.brand.prompt{margin:0 auto 0 0;font:600 13px var(--mono)}
+.brand.prompt .u{font-weight:600}
